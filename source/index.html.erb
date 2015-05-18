@@ -1,10 +1,20 @@
----
-title: Welcome to Middleman
----
+<script>
+	var AUTOTUNE = <%=data.autotune.to_json %>;
+</script>
 
-<div class="welcome">
-  <h1>Middleman is Watching</h1>
-  <p class="doc">
-    <%= link_to "Read Online Documentation", "http://middlemanapp.com/" %>
-  </p><!-- .doc -->
-</div><!-- .welcome -->
+<div id="blueprint-carousel" class="carousel slide">
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#blueprint-carousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#blueprint-carousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<%= javascript_include_tag  "slideshow" %>
