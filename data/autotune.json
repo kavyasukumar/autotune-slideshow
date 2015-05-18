@@ -1,0 +1,15 @@
+{
+  "title": "A sample slideshow",
+  "slug": "sample-slideshow",
+  "theme": "default",
+  "images":[
+	  {
+	  	"src":"http://kavyasukumar.com/apps/imgSlider/img/before.jpg",
+	  	"caption":"Evanston, IL at night."
+	  },
+	  {
+	  	"src":"http://kavyasukumar.com/apps/imgSlider/img/after.jpg",
+	  	"caption":"Evanston, IL in the morning."
+	  }
+  ]
+}
