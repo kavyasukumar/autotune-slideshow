@@ -47,6 +47,9 @@
 #   end
 # end
 
+set :layout, 'layout'
+set :vertical, data.autotune.theme
+
 set :css_dir, 'stylesheets'
 
 set :js_dir, 'javascripts'
@@ -55,18 +58,14 @@ set :images_dir, 'images'
 
 # Build-specific configuration
 configure :build do
-  # For example, change the Compass output style for deployment
-  # activate :minify_css
+   require 'uri'
+  uri = URI(data.autotune.base_url)
+  set :absolute_prefix, "#{uri.scheme}://#{uri.host}"
 
-  # Minify Javascript on build
-  # activate :minify_javascript
+  set :url_prefix, uri.path
+  set :http_prefix, data.autotune.base_url
 
-  # Enable cache buster
-  # activate :asset_hash
-
-  # Use relative URLs
-  # activate :relative_assets
-
-  # Or use a different image path
-  # set :http_prefix, "/Content/images/"
+  activate :asset_hash
+  activate :minify_javascript
+  activate :minify_css
 end
