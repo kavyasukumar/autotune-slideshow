@@ -2,6 +2,7 @@
   'use strict';
 
   var slides;
+  var pymChild = new pym.Child();
 
   var addSlides = function(){
   	$.each(slides, function(i, item){
@@ -22,6 +23,7 @@
   				.html(item.caption));
   		}
   		$('.carousel-inner').append($itemDiv);
+  		pymChild.sendHeight();
   	});
   };
 
