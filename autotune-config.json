@@ -1,0 +1,36 @@
+{
+  "name": "Carousel blueprint",
+  "description": "Blueprint for creating a bootstrap carousel.",
+  "instructions": "### Instructions\n Add as many images and captions as needed.",
+  "type": "app",
+  "tags": ["Example"],
+  "thumbnail": "thumbnail.jpg",
+  "authors": ["Kavya Sukumar <kavya.sukumar@voxmedia.com>"],
+  "form": {
+    "schema": {
+      "type": "object",
+      "properties": {
+        "images": {
+          "type": "array",
+          "title": "Images",
+          "items": {
+              "title":"<span class='label label-primary'>Image</span>",
+            "type": "object",
+            "minItems": 2,
+            "properties": {
+              "src": {
+                "title": "Image Url",
+                "type": "string",
+                "required": true
+              },
+              "caption": {
+                "title": "Caption (optional)",
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
