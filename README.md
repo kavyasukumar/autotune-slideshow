@@ -1,2 +1,2 @@
 # autotune-slideshow
-Demo of creating a blueprint
+Blueprint demo project. Instructions at https://github.com/voxmedia/autotune/wiki/How-to-create-a-blueprint
